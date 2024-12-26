@@ -15,32 +15,40 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center; /* Centra todo verticalmente */
+            justify-content: center; /* Centra verticalmente el contenido */
+            text-align: center; /* Asegura que el texto esté centrado */
         }
 
         img.logo {
-            margin-top: 1rem;
-            width: 40%; /* Reduce el tamaño del logo al 40% */
-            height: auto; /* Mantiene las proporciones del logo */
+            width: 40%; /* Tamaño del logo al 40% */
+            height: auto; /* Mantiene las proporciones */
         }
 
         h2 {
             color: white;
             font-size: 2rem;
             margin: 1rem 0;
-            text-align: center;
         }
 
         .game-selection {
             display: flex;
             justify-content: center; /* Centra las imágenes horizontalmente */
+            align-items: center;
             gap: 2rem; /* Espacio entre las imágenes */
+            margin-top: 1rem;
         }
 
         .game-selection img {
-            width: 60%; /* Ambas imágenes al 60% */
             height: auto; /* Mantiene las proporciones */
             cursor: pointer;
+        }
+
+        .game-selection img.yw1 {
+            width: 50%; /* Tamaño del yw1.png al 50% */
+        }
+
+        .game-selection img.yw2 {
+            width: 60%; /* Tamaño del yw2.png al 60% */
         }
     </style>
 </head>
@@ -54,10 +62,10 @@
     <!-- Selección de juegos -->
     <div class="game-selection">
         <a href="https://yo-quiz.github.io/esp-yw1">
-            <img src="YW1.png" alt="Yo-kai Watch 1">
+            <img src="yw1.png" alt="Yo-kai Watch 1" class="yw1">
         </a>
         <a href="https://yo-quiz.github.io/esp-yw2">
-            <img src="YW2.png" alt="Yo-kai Watch 2">
+            <img src="yw2.png" alt="Yo-kai Watch 2" class="yw2">
         </a>
     </div>
 </body>
