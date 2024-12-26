@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Yo-Quiz</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Asegura que html y body ocupen toda la pantalla */
+            background: linear-gradient(to bottom, #00aaff, #006699); /* Gradiente azul claro a oscuro */
+            background-size: 100% 100%; /* Cubre todo el área disponible */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        img.logo {
+            margin-top: 2rem;
+            width: 40%; /* Reduce el tamaño de la imagen al 40% */
+            height: auto; /* Mantiene las proporciones de la imagen */
+        }
+
+        h2 {
+            color: white;
+            font-size: 2rem;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .game-selection {
+            display: flex;
+            justify-content: center;
+            gap: 2rem; /* Separación entre las imágenes */
+            margin-top: 2rem;
+        }
+
+        .game-selection img {
+            width: 20%; /* Ajusta el tamaño de las imágenes */
+            max-width: 300px; /* Tamaño máximo */
+            height: auto; /* Mantiene las proporciones */
+            cursor: pointer;
+        }
+
+        .game-selection img:hover {
+            transform: scale(1.1); /* Agranda un poco al pasar el cursor */
+            transition: transform 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo principal -->
+    <img src="yoquiz.png" alt="Yo-Quiz Logo" class="logo">
+
+    <!-- Texto debajo del logo -->
+    <h2>Selecciona el juego</h2>
+
+    <!-- Selección de juegos -->
+    <div class="game-selection">
+        <a href="https://yo-quiz.github.io/esp-yw1">
+            <img src="yw1.png" alt="Yo-kai Watch 1">
+        </a>
+        <a href="https://yo-quiz.github.io/esp-yw2">
+            <img src="yw2.png" alt="Yo-kai Watch 2">
+        </a>
+    </div>
+</body>
+</html>
