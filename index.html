@@ -14,14 +14,13 @@
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
             align-items: center;
         }
 
         img.logo {
             margin-top: 2rem;
-            width: 40%; /* Reduce el tamaño de la imagen al 40% */
-            height: auto; /* Mantiene las proporciones de la imagen */
+            width: 40%; /* Reduce el tamaño del logo al 40% */
+            height: auto; /* Mantiene las proporciones del logo */
         }
 
         h2 {
@@ -34,20 +33,17 @@
         .game-selection {
             display: flex;
             justify-content: center;
-            gap: 2rem; /* Separación entre las imágenes */
+            align-items: center;
+            gap: 2rem; /* Espacio entre las imágenes */
             margin-top: 2rem;
+            flex-wrap: wrap; /* Permite que las imágenes se ajusten si la pantalla es pequeña */
         }
 
         .game-selection img {
-            width: 20%; /* Ajusta el tamaño de las imágenes */
-            max-width: 300px; /* Tamaño máximo */
+            width: 100%; /* Las imágenes ocupan el 100% de su tamaño original */
+            max-width: 600px; /* Limita el tamaño máximo a 600px */
             height: auto; /* Mantiene las proporciones */
             cursor: pointer;
-        }
-
-        .game-selection img:hover {
-            transform: scale(1.1); /* Agranda un poco al pasar el cursor */
-            transition: transform 0.2s;
         }
     </style>
 </head>
