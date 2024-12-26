@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Select (Español)</title>
+    <title>Welcome to Yo-Quiz</title>
     <style>
         html, body {
             margin: 0;
@@ -39,9 +39,17 @@
         }
 
         .game-selection img {
-            width: 60%; /* Ajusta el tamaño al 60% */
             height: auto; /* Mantiene las proporciones */
             cursor: pointer;
+        }
+
+        /* Tamaño específico para cada imagen */
+        .game-selection img.yw1 {
+            width: 50%; /* yw1.png al 50% */
+        }
+
+        .game-selection img.yw2 {
+            width: 60%; /* yw2.png al 60% */
         }
     </style>
 </head>
@@ -55,11 +63,12 @@
     <!-- Selección de juegos -->
     <div class="game-selection">
         <a href="https://yo-quiz.github.io/esp-yw1">
-            <img src="yw1.png" alt="Yo-kai Watch 1">
+            <img src="yw1.png" alt="Yo-kai Watch 1" class="yw1">
         </a>
         <a href="https://yo-quiz.github.io/esp-yw2">
-            <img src="yw2.png" alt="Yo-kai Watch 2">
+            <img src="yw2.png" alt="Yo-kai Watch 2" class="yw2">
         </a>
     </div>
 </body>
 </html>
+
