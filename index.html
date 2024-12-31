@@ -8,13 +8,10 @@
         html, body {
             margin: 0;
             padding: 0;
-            min-height: 100%; /* Asegura que el fondo cubra toda la pantalla */
+            height: 100%; /* Asegura que el gradiente cubra toda la pantalla */
             background: linear-gradient(to bottom, #00aaff, #006699);
             background-size: cover;
             font-family: Arial, sans-serif;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
         }
 
         body {
@@ -22,6 +19,7 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
+            min-height: 100%; /* Extiende el fondo si el contenido es más alto que la ventana */
         }
 
         img.logo {
@@ -43,7 +41,7 @@
             gap: 1rem; /* Espaciado entre imágenes */
             flex-wrap: wrap; /* Permite que las imágenes se reorganicen en filas o columnas */
             padding: 1rem;
-            width: 100%; /* Asegura que el contenedor se extienda */
+            width: 100%;
         }
 
         .game-selection img {
