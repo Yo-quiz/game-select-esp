@@ -8,16 +8,26 @@
         html, body {
             margin: 0;
             padding: 0;
-            height: 100%;
+            min-height: 100%; /* Asegura que el fondo cubra toda la pantalla */
             background: linear-gradient(to bottom, #00aaff, #006699);
             background-size: cover;
             font-family: Arial, sans-serif;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
         }
 
         img.logo {
             width: 20%;
             height: auto;
+            margin-top: 1rem;
         }
 
         h2 {
@@ -28,22 +38,23 @@
 
         .game-selection {
             display: flex;
-            justify-content: center; /* Centra horizontalmente */
-            align-items: center; /* Alinea verticalmente en caso necesario */
+            justify-content: center;
+            align-items: center;
             gap: 1rem; /* Espaciado entre imágenes */
-            flex-wrap: wrap; /* Permite que las imágenes pasen a una nueva línea si no hay espacio */
+            flex-wrap: wrap; /* Permite que las imágenes se reorganicen en filas o columnas */
             padding: 1rem;
+            width: 100%; /* Asegura que el contenedor se extienda */
         }
 
         .game-selection img {
-            width: 150px; /* Tamaño base de las imágenes */
+            width: 150px; /* Tamaño inicial de las imágenes */
             height: auto;
             cursor: pointer;
             transition: transform 0.2s;
         }
 
         .game-selection img:hover {
-            transform: scale(1.1); /* Efecto hover */
+            transform: scale(1.1); /* Efecto de zoom suave */
         }
 
         /* Media query para pantallas más pequeñas */
@@ -52,7 +63,7 @@
                 flex-direction: column; /* Cambia a columna si la pantalla es estrecha */
             }
             .game-selection img {
-                width: 200px; /* Aumenta ligeramente el tamaño para pantallas pequeñas */
+                width: 200px; /* Ajusta el tamaño para pantallas pequeñas */
             }
         }
     </style>
