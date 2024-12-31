@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Select (Español)</title>
     <style>
+        /* Asegura que el fondo y el contenido se ajusten correctamente */
         html, body {
             margin: 0;
             padding: 0;
@@ -12,6 +13,8 @@
             background: linear-gradient(to bottom, #00aaff, #006699);
             background-size: cover;
             font-family: Arial, sans-serif;
+            box-sizing: border-box; /* Para que el padding no afecte al tamaño */
+            overflow: hidden; /* Evita la barra de desplazamiento */
         }
 
         body {
@@ -20,6 +23,7 @@
             justify-content: flex-start;
             align-items: center;
             min-height: 100%; /* Extiende el fondo si el contenido es más alto que la ventana */
+            padding: 0; /* Elimina el padding del body */
         }
 
         img.logo {
@@ -34,6 +38,7 @@
             margin: 1rem 0;
         }
 
+        /* Contenedor de selección de juegos */
         .game-selection {
             display: flex;
             justify-content: center;
@@ -42,6 +47,8 @@
             flex-wrap: wrap; /* Permite que las imágenes se reorganicen en filas o columnas */
             padding: 1rem;
             width: 100%;
+            box-sizing: border-box;
+            flex-grow: 1; /* Hace que el contenedor crezca para llenar el espacio disponible */
         }
 
         .game-selection img {
@@ -59,6 +66,7 @@
         @media (max-width: 800px) {
             .game-selection {
                 flex-direction: column; /* Cambia a columna si la pantalla es estrecha */
+                align-items: center; /* Centra las imágenes en columnas */
             }
             .game-selection img {
                 width: 200px; /* Ajusta el tamaño para pantallas pequeñas */
