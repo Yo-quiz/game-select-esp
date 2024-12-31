@@ -8,20 +8,20 @@
         html, body {
             margin: 0;
             padding: 0;
-            height: 100%; /* Asegura que html y body ocupen toda la pantalla */
-            background: linear-gradient(to bottom, #00aaff, #006699); /* Gradiente azul claro a oscuro */
-            background-size: cover; /* Cubre toda el área disponible */
+            height: 100%;
+            background: linear-gradient(to bottom, #00aaff, #006699);
+            background-size: cover;
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center; /* Centra verticalmente el contenido */
-            text-align: center; /* Asegura que el texto esté centrado */
+            justify-content: center;
+            text-align: center;
         }
 
         img.logo {
-            width: 20%; /* Tamaño del logo al 40% */
-            height: auto; /* Mantiene las proporciones */
+            width: 20%; /* Tamaño del logo */
+            height: auto;
         }
 
         h2 {
@@ -33,115 +33,23 @@
         .game-selection {
             display: flex;
             justify-content: center; /* Centra las imágenes horizontalmente */
-            align-items: center;
+            flex-wrap: wrap; /* Permite que las imágenes se ajusten a la pantalla si es necesario */
             gap: 2rem; /* Espacio entre las imágenes */
             margin-top: 1rem;
+            width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
         }
 
         .game-selection img {
-            height: auto; /* Mantiene las proporciones */
+            width: calc(100% / 6 - 2rem); /* Divide el ancho en partes iguales con espacio entre imágenes */
+            max-width: 150px; /* Límite máximo de tamaño para las imágenes */
+            height: auto;
             cursor: pointer;
+            transition: transform 0.2s;
         }
 
-        .game-selection img.yw1 {
-            width: 50%;
+        .game-selection img:hover {
+            transform: scale(1.1); /* Efecto hover */
         }
-
-        .game-selection img.yw2 {
-            width: 60%;
-        }
-        .game-selection img.yw3 {
-            width: 60%;
-        }
-        .game-selection img.yw4 {
-            width: 60%;
-        }
-        .game-selection img.ywb {
-            width: 50%;
-        }
-        .game-selection img.yb2 {
-            width: 60%; 
-        }
-        
-.game-selection img.yw1 {
-    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
-    position: relative; /* Asegura que el contenedor gestione el posicionamiento */
-}
-
-.game-selection img.yw1 {
-    display: block; /* Evita espacios extra alrededor de las imágenes */
-    transition: transform 0.2s; /* Define la transición para un efecto suave */
-}
-
-.game-selection img.yw1:hover {
-    transform: scale(1.1); /* Aumenta ligeramente la escala */
-}
-
-.game-selection img.yw2 {
-    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
-    position: relative; /* Asegura que el contenedor gestione el posicionamiento */
-}
-
-.game-selection img.yw2 {
-    display: block; /* Evita espacios extra alrededor de las imágenes */
-    transition: transform 0.2s; /* Define la transición para un efecto suave */
-}
-
-.game-selection img.yw2:hover {
-    transform: scale(1.1); /* Aumenta ligeramente la escala */
-}
-.game-selection img.yw3 {
-    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
-    position: relative; /* Asegura que el contenedor gestione el posicionamiento */
-}
-
-.game-selection img.yw3 {
-    display: block; /* Evita espacios extra alrededor de las imágenes */
-    transition: transform 0.2s; /* Define la transición para un efecto suave */
-}
-
-.game-selection img.yw3:hover {
-    transform: scale(1.1); /* Aumenta ligeramente la escala */
-}
-.game-selection img.yw4 {
-    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
-    position: relative; /* Asegura que el contenedor gestione el posicionamiento */
-}
-
-.game-selection img.yw4 {
-    display: block; /* Evita espacios extra alrededor de las imágenes */
-    transition: transform 0.2s; /* Define la transición para un efecto suave */
-}
-
-.game-selection img.yw4:hover {
-    transform: scale(1.1); /* Aumenta ligeramente la escala */
-}
-.game-selection img.ywb {
-    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
-    position: relative; /* Asegura que el contenedor gestione el posicionamiento */
-}
-
-.game-selection img.ywb {
-    display: block; /* Evita espacios extra alrededor de las imágenes */
-    transition: transform 0.2s; /* Define la transición para un efecto suave */
-}
-
-.game-selection img.ywb:hover {
-    transform: scale(1.1); /* Aumenta ligeramente la escala */
-}
-.game-selection img.yb2 {
-    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
-    position: relative; /* Asegura que el contenedor gestione el posicionamiento */
-}
-
-.game-selection img.yb2 {
-    display: block; /* Evita espacios extra alrededor de las imágenes */
-    transition: transform 0.2s; /* Define la transición para un efecto suave */
-}
-
-.game-selection img.yb2:hover {
-    transform: scale(1.1); /* Aumenta ligeramente la escala */
-}
     </style>
 </head>
 <body>
@@ -154,22 +62,22 @@
     <!-- Selección de juegos -->
     <div class="game-selection">
         <a href="https://yo-quiz.github.io/esp-yw1">
-            <img src="YW1.png" alt="Yo-kai Watch 1" class="yw1">
+            <img src="YW1.png" alt="Yo-kai Watch 1">
         </a>
         <a href="https://yo-quiz.github.io/esp-yw2">
-            <img src="YW2.png" alt="Yo-kai Watch 2" class="yw2">
+            <img src="YW2.png" alt="Yo-kai Watch 2">
         </a>
         <a href="https://yo-quiz.github.io/esp-yw3">
-            <img src="yw3.png" alt="Yo-kai Watch 3" class="yw3">
+            <img src="yw3.png" alt="Yo-kai Watch 3">
         </a>
         <a href="https://yo-quiz.github.io/esp-yw4">
-            <img src="yw4.png" alt="Yo-kai Watch 4" class="yw4">
+            <img src="yw4.png" alt="Yo-kai Watch 4">
         </a>
         <a href="https://yo-quiz.github.io/esp-ywb">
-            <img src="ywb.png" alt="Yo-kai Watch Blasters" class="ywb">
+            <img src="ywb.png" alt="Yo-kai Watch Blasters">
         </a>
         <a href="https://yo-quiz.github.io/esp-yb2">
-            <img src="yb2.png" alt="Yo-kai Watch Busters 2" class="yb2">
+            <img src="yb2.png" alt="Yo-kai Watch Busters 2">
         </a>
     </div>
 </body>
