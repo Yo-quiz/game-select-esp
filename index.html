@@ -16,7 +16,7 @@
         }
 
         img.logo {
-            width: 40%;
+            width: 20%;
             height: auto;
         }
 
@@ -28,16 +28,15 @@
 
         .game-selection {
             display: flex;
-            justify-content: center; /* Centra las imágenes horizontalmente */
-            align-items: center; /* Alinea verticalmente en caso de que alguna imagen sea más alta */
-            gap: 1rem; /* Espacio entre imágenes */
-            flex-wrap: nowrap; /* Evita que las imágenes se vayan a una nueva línea */
-            overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Alinea verticalmente en caso necesario */
+            gap: 1rem; /* Espaciado entre imágenes */
+            flex-wrap: wrap; /* Permite que las imágenes pasen a una nueva línea si no hay espacio */
             padding: 1rem;
         }
 
         .game-selection img {
-            width: 180px; /* Tamaño fijo para las imágenes */
+            width: 150px; /* Tamaño base de las imágenes */
             height: auto;
             cursor: pointer;
             transition: transform 0.2s;
@@ -45,6 +44,16 @@
 
         .game-selection img:hover {
             transform: scale(1.1); /* Efecto hover */
+        }
+
+        /* Media query para pantallas más pequeñas */
+        @media (max-width: 800px) {
+            .game-selection {
+                flex-direction: column; /* Cambia a columna si la pantalla es estrecha */
+            }
+            .game-selection img {
+                width: 200px; /* Aumenta ligeramente el tamaño para pantallas pequeñas */
+            }
         }
     </style>
 </head>
