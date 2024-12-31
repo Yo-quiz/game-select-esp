@@ -44,14 +44,23 @@
         }
 
         .game-selection img.yw1 {
-            width: 50%; /* Tamaño del yw1.png al 50% */
+            width: 50%;
         }
 
         .game-selection img.yw2 {
-            width: 60%; /* Tamaño del yw2.png al 60% */
+            width: 60%;
+        }
+        .game-selection img.yw3 {
+            width: 40%;
+        }
+        .game-selection img.yw4 {
+            width: 40%;
         }
         .game-selection img.ywb {
-            width: 40%; /* Tamaño del yw2.png al 40% */
+            width: 40%;
+        }
+        .game-selection img.yb2 {
+            width: 40%; 
         }
         
 .game-selection img.yw1 {
@@ -81,7 +90,32 @@
 .game-selection img.yw2:hover {
     transform: scale(1.1); /* Aumenta ligeramente la escala */
 }
+.game-selection img.yw3 {
+    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+    position: relative; /* Asegura que el contenedor gestione el posicionamiento */
+}
 
+.game-selection img.yw3 {
+    display: block; /* Evita espacios extra alrededor de las imágenes */
+    transition: transform 0.2s; /* Define la transición para un efecto suave */
+}
+
+.game-selection img.yw3:hover {
+    transform: scale(1.1); /* Aumenta ligeramente la escala */
+}
+.game-selection img.yw4 {
+    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+    position: relative; /* Asegura que el contenedor gestione el posicionamiento */
+}
+
+.game-selection img.yw4 {
+    display: block; /* Evita espacios extra alrededor de las imágenes */
+    transition: transform 0.2s; /* Define la transición para un efecto suave */
+}
+
+.game-selection img.yw4:hover {
+    transform: scale(1.1); /* Aumenta ligeramente la escala */
+}
 .game-selection img.ywb {
     overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
     position: relative; /* Asegura que el contenedor gestione el posicionamiento */
@@ -93,6 +127,19 @@
 }
 
 .game-selection img.ywb:hover {
+    transform: scale(1.1); /* Aumenta ligeramente la escala */
+}
+.game-selection img.yb2 {
+    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+    position: relative; /* Asegura que el contenedor gestione el posicionamiento */
+}
+
+.game-selection img.yb2 {
+    display: block; /* Evita espacios extra alrededor de las imágenes */
+    transition: transform 0.2s; /* Define la transición para un efecto suave */
+}
+
+.game-selection img.yb2:hover {
     transform: scale(1.1); /* Aumenta ligeramente la escala */
 }
     </style>
@@ -112,8 +159,17 @@
         <a href="https://yo-quiz.github.io/esp-yw2">
             <img src="YW2.png" alt="Yo-kai Watch 2" class="yw2">
         </a>
+        <a href="https://yo-quiz.github.io/esp-yw3">
+            <img src="yw3.png" alt="Yo-kai Watch 3" class="yw3">
+        </a>
+        <a href="https://yo-quiz.github.io/esp-yw4">
+            <img src="yw4.png" alt="Yo-kai Watch 4" class="yw4">
+        </a>
         <a href="https://yo-quiz.github.io/esp-ywb">
             <img src="ywb.png" alt="Yo-kai Watch Blasters" class="ywb">
+        </a>
+        <a href="https://yo-quiz.github.io/esp-yb2">
+            <img src="yb2.png" alt="Yo-kai Watch Busters 2" class="yb2">
         </a>
     </div>
 </body>
