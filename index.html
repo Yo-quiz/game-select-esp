@@ -12,15 +12,11 @@
             background: linear-gradient(to bottom, #00aaff, #006699);
             background-size: cover;
             font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
             text-align: center;
         }
 
         img.logo {
-            width: 20%; /* Tamaño del logo */
+            width: 20%;
             height: auto;
         }
 
@@ -33,15 +29,15 @@
         .game-selection {
             display: flex;
             justify-content: center; /* Centra las imágenes horizontalmente */
-            flex-wrap: wrap; /* Permite que las imágenes se ajusten a la pantalla si es necesario */
-            gap: 1rem; /* Espacio entre las imágenes */
-            margin-top: 1rem;
-            width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+            align-items: center; /* Alinea verticalmente en caso de que alguna imagen sea más alta */
+            gap: 1rem; /* Espacio entre imágenes */
+            flex-wrap: nowrap; /* Evita que las imágenes se vayan a una nueva línea */
+            overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+            padding: 1rem;
         }
 
         .game-selection img {
-            width: calc(100% / 6 - 1rem); /* Divide el ancho en partes iguales con espacio entre imágenes */
-            max-width: 900px; /* Límite máximo de tamaño para las imágenes */
+            width: 150px; /* Tamaño fijo para las imágenes */
             height: auto;
             cursor: pointer;
             transition: transform 0.2s;
