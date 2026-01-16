@@ -4,29 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Select (Español)</title>
+
     <style>
-        /* Asegura que el fondo sea de un color sólido */
         html, body {
             margin: 0;
             padding: 0;
-            height: 100%; /* Asegura que el fondo cubra toda la pantalla */
+            height: 100%;
             background-color: #0088cc;
             font-family: Arial, sans-serif;
-            box-sizing: border-box; /* Para que el padding no afecte al tamaño */
+            box-sizing: border-box;
         }
 
         body {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
             align-items: center;
-            min-height: 100%; /* Extiende el fondo si el contenido es más alto que la ventana */
-            padding: 0; /* Elimina el padding del body */
         }
 
         img.logo {
             width: 20%;
-            height: auto;
             margin-top: 1rem;
         }
 
@@ -36,72 +32,112 @@
             margin: 1rem 0;
         }
 
-        /* Contenedor de selección de juegos */
+        /* Juegos principales */
         .game-selection {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 1rem; /* Espaciado entre imágenes */
-            flex-wrap: wrap; /* Permite que las imágenes se reorganicen en filas o columnas */
+            gap: 1rem;
+            flex-wrap: wrap;
             padding: 1rem;
-            width: 100%;
-            box-sizing: border-box;
-            flex-grow: 1; /* Hace que el contenedor crezca para llenar el espacio disponible */
         }
 
         .game-selection img {
-            width: 150px; /* Tamaño inicial de las imágenes */
-            height: auto;
+            width: 150px;
             cursor: pointer;
             transition: transform 0.2s;
         }
 
         .game-selection img:hover {
-            transform: scale(1.1); /* Efecto de zoom suave */
+            transform: scale(1.1);
         }
 
-        /* Media query para pantallas más pequeñas */
+        /* Hileras de iconos */
+        .icon-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1rem 0;
+            width: 100%;
+        }
+
+        .icon-item {
+            text-align: center;
+            width: 100px;
+        }
+
+        .icon-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .icon-item img:hover {
+            transform: scale(1.1);
+        }
+
+        .icon-item span {
+            display: block;
+            color: white;
+            font-size: 0.85rem;
+            margin-top: 0.3rem;
+        }
+
         @media (max-width: 800px) {
-            .game-selection {
-                flex-direction: column; /* Cambia a columna si la pantalla es estrecha */
-                align-items: center; /* Centra las imágenes en columnas */
-            }
-            .game-selection img {
-                width: 200px; /* Ajusta el tamaño para pantallas pequeñas */
+            img.logo {
+                width: 40%;
             }
         }
     </style>
 </head>
-<body>
-    <!-- Logo principal -->
-    <img src="yoquiz.png" alt="Yo-Quiz Logo" class="logo">
 
-    <!-- Texto debajo del logo -->
+<body>
+
+    <img src="yoquiz.png" alt="Yo-Quiz Logo" class="logo">
     <h2>Selecciona el juego</h2>
 
-    <!-- Selección de juegos -->
     <div class="game-selection">
-        <a href="https://yo-quiz.github.io/esp-yw1">
-            <img src="YW1.png" alt="Yo-kai Watch 1">
-        </a>
-        <a href="https://yo-quiz.github.io/esp-yw2">
-            <img src="YW2.png" alt="Yo-kai Watch 2">
-        </a>
-        <a href="https://yo-quiz.github.io/esp-yw3">
-            <img src="yw3.png" alt="Yo-kai Watch 3">
-        </a>
-        <a href="https://yo-quiz.github.io/esp-yw4">
-            <img src="yw4.png" alt="Yo-kai Watch 4">
-        </a>
-        <a href="https://yo-quiz.github.io/esp-ywb">
-            <img src="ywb.png" alt="Yo-kai Watch Blasters">
-        </a>
-        <a href="https://yo-quiz.github.io/esp-yb2">
-            <img src="yb2.png" alt="Yo-kai Watch Busters 2">
-        </a>
-        <a href="https://yo-quiz.github.io/esp-full">
-            <img src="full.png" alt="Full Yo-quiz">
-        </a>
+        <a href="https://yo-quiz.github.io/esp-yw1"><img src="YW1.png"></a>
+        <a href="https://yo-quiz.github.io/esp-yw2"><img src="YW2.png"></a>
+        <a href="https://yo-quiz.github.io/esp-yw3"><img src="yw3.png"></a>
+        <a href="https://yo-quiz.github.io/esp-yw4"><img src="yw4.png"></a>
+        <a href="https://yo-quiz.github.io/esp-ywb"><img src="ywb.png"></a>
+        <a href="https://yo-quiz.github.io/esp-yb2"><img src="yb2.png"></a>
+        <a href="https://yo-quiz.github.io/esp-full"><img src="full.png"></a>
     </div>
+
+    <!-- PRIMERA HILERA -->
+    <div class="icon-row">
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-val"><img src="valiente.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-mis"><img src="misteriosa.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-rob"><img src="robusta.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-gua"><img src="guapa.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-ama"><img src="amable.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-osc"><img src="oscura.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-sin"><img src="siniestra.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-esc"><img src="escurridiza.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-mal"><img src="malefica.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-enm"><img src="enma.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-ayd"><img src="aydroide.png"></a>
+    </div>
+
+    <!-- SEGUNDA HILERA -->
+    <div class="icon-row">
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-onn"><img src="onnen.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-gor"><img src="goriki.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-oma"><img src="omamori.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-mon"><img src="mononoke.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-tsu"><img src="tsukumono.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-uwa"><img src="uwasanora.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-mal"><img src="kaima.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-oni"><img src="oni.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-iza"><img src="izana.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-mik"><img src="mikado.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-mkk"><img src="mikakunin.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/esp-shi"><img src="shinma.png"></a>
+    </div>
+
 </body>
 </html>
